@@ -3,38 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="">
     <title>Cadastro</title>
 </head>
 
 <body>
     <div>
-        <h1>Cadastro do desenvolvedor</h1>
-        <p>Preencha suas informações</p>
+        <h1 id="titulo">Cadastro do desenvolvedor</h1>
+        <p id="subtitulo">Preencha suas informações</p>
         <br>
     </div>
 
     <form>
-        <fieldset>
-            <div>
-                <label>Nome</label>
-                <input type="text" nome="nome" id="nome">
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" nome="nome" id="nome" required>
             </div>
 
-            <div>
-                <label>Sobrenome</label>
-                <input type="text" nome="sobrenome" id="sobrenome">
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" nome="sobrenome" id="sobrenome" required>
             </div>
         </fieldset>
 
-        <div>
-            <label>E-mail</label>
-            <input type="email" nome="email" id="email">
+        <div class="campo">
+            <label for="email"><strong>E-mail</strong></label>
+            <input type="email" nome="email" id="email" required>
         </div>
 
-        <div>
-            <label>De qaul lado você desenvolve?</label>
+        <div class="campo">
+            <label><strong>De qual lado você desenvolve?</strong></label>
             <label>
                 <input type="radio" nome="devweb" value="frontend">Front-end
             </label>
@@ -45,6 +46,46 @@
                 <input type="radio" nome="devweb" value="fullstack">Fullstack
             </label>
         </div>
+
+        <div class="campo">
+            <label for="senior"><strong>Grua de senioridade:</strong></label>
+            <select id="senior">
+                <option selected disabled value="">Selecione</option>
+                <option>Junior</option>
+                <option>Pleno</option>
+                <option>Sênior</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione quais linguagens você tem conhecimento:</strong></label><br><br>
+                <input type="checkbox" id="tec1" nome="tec1" value="HTML">
+                <label for="tec1">HTML</label>
+                <input type="checkbox" id="tec2" nome="tec2" value="JavaScript">
+                <label for="tec2">JavaScript</label>
+                <input type="checkbox" id="tec3" nome="tec3" value="CSS">
+                <label for="tec3">CSS</label>
+                <input type="checkbox" id="tec4" nome="tec4" value="Python">
+                <label for="tec4">Python</label>
+                <input type="checkbox" id="tec5" nome="tec5" value="PHP">
+                <label for="tec5">PHP</label>
+                <input type="checkbox" id="tec6" nome="tec6" value="C#">
+                <label for="tec6">C#</label>
+                <input type="checkbox" id="tec7" nome="tec7" value="Java">
+                <label for="tec7">Java</label>
+                <input type="checkbox" id="tec8" nome="tec8" value="TypeScript">
+                <label for="tec8">TypeScript</label>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <br>
+            <label><strong>Nos conte um pouco sobre a sua experiência:</strong></label>
+            <textarea rows="6" style="width: 26em;" id="relato" nome="relato"></textarea>
+        </div>
+        
+        <button class="botao" type="submit" onsubmit="">Concluir</button>
     </form>
 
 </body>
